@@ -15,7 +15,7 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: btnWidth ?? double.infinity,
-      height: 64,
+      height: 55,
       decoration: BoxDecoration(
         color: Color(0xFFFF5C00),
         borderRadius: BorderRadius.circular(10),

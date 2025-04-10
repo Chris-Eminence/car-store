@@ -4,16 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:cryptx/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../widgets/dialogue_box.dart';
 import '../../widgets/grid_view_items.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        leading: IconButton(onPressed: () {
+        }, icon: Icon(Icons.menu)),
         actions: [
           IconButton(
             onPressed: () {},
@@ -55,10 +63,58 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return Dialog(
+                          backgroundColor: Color(0xFFf9fafc),
+                          child: DefaultTabController(
+                            length: 3,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                TabBar(
+                                  indicatorColor: kPrimaryColor,
+                                  indicatorSize: TabBarIndicatorSize.tab,
+                                  labelColor: kPrimaryColor,
+                                  unselectedLabelColor: kPrimaryColor.withValues(alpha: 0.5),
+                                  tabs: [
+                                    Tab(child: Text('All', style: GoogleFonts.poppins(fontWeight: FontWeight.bold),)),
+                                    Tab(child: Text('New', style: GoogleFonts.poppins(fontWeight: FontWeight.bold),)),
+                                    Tab(child: Text('Used', style: GoogleFonts.poppins(fontWeight: FontWeight.bold),)),
+
+                                  ],
+                                ),
+                                Container(
+                                  height: 420,
+                                  // adjust as needed
+                                  padding: EdgeInsets.all(16),
+                                  child: TabBarView(
+                                    children: [
+                                      FilterDialogue(),
+                                      FilterDialogue(),
+                                      FilterDialogue(),
+
+                                    ],
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () => Navigator.of(context).pop(),
+                                  child: Text("Close"),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
                   icon: Icon(Icons.filter_list_rounded),
                   color: kPrimaryColor,
                 ),
+
+
               ],
             ),
             SizedBox(height: 30),
@@ -112,3 +168,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
