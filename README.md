@@ -2,6 +2,7 @@
 
 
 This a demo project that enable users buy and sale cars.
+design from https://www.figma.com/design/eZGfY35dYStcpEoi9Q3mEs/CarStore-%7C-Car-Selling-Buying-App--Community-?node-id=103-207&t=09Qrzr0gOptPTu8C-0
 
 1. User can register
 2. user can login
