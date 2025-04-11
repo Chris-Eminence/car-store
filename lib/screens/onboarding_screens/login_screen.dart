@@ -1,4 +1,5 @@
 import 'package:cryptx/constant.dart';
+import 'package:cryptx/screens/onboarding_screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,11 +67,17 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  Text(
-                    " Sign Up",
-                    style: GoogleFonts.poppins(
-                      color: kPrimaryColor,
-                      fontWeight: FontWeight.w600,
+                  InkWell(
+                    onTap: () {
+                      // Navigate to the sign-up screen
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()));
+                    },
+                    child: Text(
+                      " Sign Up",
+                      style: GoogleFonts.poppins(
+                        color: kPrimaryColor,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   )
                 ],

@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../widgets/dialogue_box.dart';
 import '../../widgets/grid_view_items.dart';
+import 'featured_car_details_page.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -99,10 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-                                TextButton(
-                                  onPressed: () => Navigator.of(context).pop(),
-                                  child: Text("Close"),
-                                )
+
                               ],
                             ),
                           ),
@@ -118,16 +116,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             SizedBox(height: 30),
-            CarouselSlider(
-              items: widgetList,
-              options: CarouselOptions(
-                height: 170,
-                autoPlay: true,
-                aspectRatio: 16 / 9,
-                viewportFraction: 0.85,
-                autoPlayCurve: Curves.linear,
-                autoPlayInterval: Duration(seconds: 10),
-                autoPlayAnimationDuration: Duration(milliseconds: 800),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => FeaturedCarDetailsPage()));
+              },
+              child: CarouselSlider(
+                items: widgetList,
+                options: CarouselOptions(
+                  height: 170,
+                  autoPlay: true,
+                  aspectRatio: 16 / 9,
+                  viewportFraction: 0.85,
+                  autoPlayCurve: Curves.linear,
+                  autoPlayInterval: Duration(seconds: 10),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                ),
               ),
             ),
             SizedBox(height: 20),

@@ -1,5 +1,7 @@
 import 'package:cryptx/constant.dart';
+import 'package:cryptx/screens/home_screens/favourite_screen.dart';
 import 'package:cryptx/screens/home_screens/home_screen.dart';
+import 'package:cryptx/screens/home_screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeNav extends StatefulWidget {
@@ -15,8 +17,8 @@ class _HomeNavState extends State<HomeNav> {
   final List<Widget> _screens = [
     // Your actual screens here
     Center(child: HomeScreen()),
-    Center(child: Text('Favorites Screen', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Profile Screen', style: TextStyle(fontSize: 24))),
+    Center(child: FavouriteScreen()),
+    Center(child: UserProfilePage()),
   ];
 
   @override

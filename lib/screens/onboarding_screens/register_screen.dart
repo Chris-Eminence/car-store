@@ -1,3 +1,4 @@
+import 'package:cryptx/screens/home_nav.dart';
 import 'package:cryptx/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -51,7 +52,16 @@ class RegisterScreen extends StatelessWidget {
                 prefixIcon: Icon(Icons.lock, color: Colors.grey),
               ),
               SizedBox(height: 41),
-              AppButton(onTap: () {}, btnText: 'Register'),
+              AppButton(onTap: () {
+                print("the register button has been clicked");
+                // Navigate to the next screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeNav(),
+                  ),
+                );
+              }, btnText: 'Register'),
               SizedBox(height: 10),
               Row(
                 children: [

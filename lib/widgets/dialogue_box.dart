@@ -38,7 +38,7 @@ class _FilterDialogueState extends State<FilterDialogue> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       icon: Icon(Icons.keyboard_arrow_down_outlined, color: Colors.black),
-                      dropdownColor: kLightGreyColor,
+                      dropdownColor: Colors.grey,
                       items: ['Brand one', 'Brand two', 'Brand three'].map((item) {
                         return DropdownMenuItem<String>(
                           value: item,
@@ -67,7 +67,7 @@ class _FilterDialogueState extends State<FilterDialogue> {
                         style: TextStyle(color: Colors.grey),
                       ),
                       icon: Icon(Icons.keyboard_arrow_down_outlined, color: Colors.black),
-                      dropdownColor: kLightGreyColor,
+                      dropdownColor: Colors.grey,
                       items: ['Model one', 'Model two', 'Model three'].map((item) {
                         return DropdownMenuItem<String>(
                           value: item,
@@ -116,7 +116,7 @@ class _FilterDialogueState extends State<FilterDialogue> {
             },
           ),
 
-          SizedBox(height: 50,),
+          SizedBox(height: 20,),
 
           Center(
             child: AppButton(

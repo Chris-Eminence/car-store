@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cryptx/screens/home_screens/featured_car_details_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,7 @@ final List<Widget> widgetList = [
     child: SizedBox(
       height: 170,
       child: GestureDetector(
-        onTap: (){},
+        onTap: () {},
         child: Stack(
           children: [
             Positioned(
@@ -26,7 +27,9 @@ final List<Widget> widgetList = [
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
-                    image: NetworkImage('https://ev-database.org/img/auto/Tesla_Model_3/Tesla_Model_3-01@2x.jpg'),
+                    image: NetworkImage(
+                      'https://ev-database.org/img/auto/Tesla_Model_3/Tesla_Model_3-01@2x.jpg',
+                    ),
                     fit: BoxFit.cover,
                   ),
                 ),
