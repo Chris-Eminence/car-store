@@ -1,16 +1,18 @@
-# cryptx
+# CarStore
 
-A new Flutter project.
 
-## Getting Started
+This a demo project that enable users buy and sale cars.
 
-This project is a starting point for a Flutter application.
+1. User can register
+2. user can login
+3. user can view featured cars and their details
+4. user can pick a favourite car
+5. user can view list of cars available for sale
+6. user can view their profile
+7. user can filter the kind of cars they want to see base on location, price, model, brand, and name.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Video Demo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/user-attachments/assets/3a75266a-195c-42ec-89ed-ff9450f8a3bf
+
